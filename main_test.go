@@ -53,6 +53,6 @@ func TestHelloHandler(t *testing.T) {
 
 	if assert.NoError(t, helloHandler(c)) {
 		assert.Equal(t, http.StatusOK, rec.Code)
-		assert.JSONEq(t, `{""message": "Hello, World!"}`, rec.Body.String())
+		assert.JSONEq(t, `{"message" : "Hello, World!"}`, rec.Body.String())
 	}
 }
